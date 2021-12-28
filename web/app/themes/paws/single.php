@@ -15,11 +15,16 @@
 			<?php 
 				foreach($related_content as $related_post) { ?>					
 					<?php
-						$post_thumbnail = wp_get_attachment_url( get_post_thumbnail_id($related_post->post_id), 'thumbnail' );
-						$post_date = get_the_date(null, $related_post->post_id);
+						$post_thumbnail = wp_get_attachment_url( get_post_thumbnail_id($related_post->ID), 'thumbnail' );
+						$post_date = get_the_date(null, $related_post->ID);
+						$permalink = get_permalink($related_post->ID);
 					?>
-					<a class="related-post" href="<?php echo $related_post->guid ?>">
+					<a class="related-post" href="<?php echo $permalink ?>">
+					<?php if($post_thumbnail) { ?>
 						<img class="related-post__image" src="<?php echo $post_thumbnail ?>" />
+					<?php } else { ?>
+						<div class="related-post__image--none related-post__image">GR</div>
+					<?php } ?>
 						<div>
 							<p class="subtitle"><?php echo $post_date ?></p>
 							<h3><?php echo $related_post->post_title ?></h3>

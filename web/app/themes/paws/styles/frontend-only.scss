@@ -19,7 +19,7 @@ body {
 	position: relative;
 
 	@include breakpoint(md) {
-		top: 48px;
+		top: 21px;
 	}
 }
 
@@ -185,6 +185,19 @@ cite {
 		@include breakpoint(md) {
 			margin-bottom: $space-5;
 			width: 205px;
+		}
+
+		&--none {
+			background: $color-dark;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: $color-light;
+			width: 100%;
+
+			@include breakpoint(md) {
+				max-width: 205px;
+			}
 		}
 	}
 }
