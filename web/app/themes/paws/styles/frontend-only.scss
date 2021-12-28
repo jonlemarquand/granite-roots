@@ -4,13 +4,27 @@ body {
 	font-size: $body-font-size;
 }
 
+.visually-hidden {
+	transform: translateY(-100%);
+  transition: transform 0.3s;
+	position:absolute;
+
+	&:focus {
+		transform: translateY(0);
+	}
+}
+
 .container {
 
 	width: calc(100% - 40px);
 	margin: 0 auto;
+	max-width: 1330px;
 
 	@include breakpoint(md) {
-		max-width: 1330px;
+		width: calc(100% - 120px);
+	}
+
+	@include breakpoint(lg) {
 		width: calc(100% - 180px);
 	}
 }
@@ -141,10 +155,22 @@ cite {
 	color: $color-green;
 	font-size: $subtitle-font-size;
 	margin-bottom: $space-1;
-	margin-top: $space-5;
 
+}
+
+.blog-post-columns {
+
+	display: flex;
+	flex-direction: column;
+	grid-gap: $space-7;
+	margin-top: $space-5;
+	
 	@include breakpoint(md) {
 		margin-top: $space-8;
+	}
+
+	@include breakpoint(lg) {
+		flex-direction: row;
 	}
 }
 
@@ -200,4 +226,36 @@ cite {
 			}
 		}
 	}
+}
+
+.front-page {
+
+	h1 {
+		margin-bottom: 0;
+	}
+
+	h1, .subtitle {
+		text-align: center;
+	}
+
+	&-post {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&-main-post {
+		margin-top: $space-5;
+	
+		&__image {
+			max-height: 381px;
+			width: 100%;
+			object-fit: cover;
+		}
+	
+	}
+}
+
+.post-grid-3 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 }

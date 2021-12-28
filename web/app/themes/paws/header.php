@@ -20,7 +20,7 @@
 	<a href="#main-content" class="visually-hidden">Skip to main content</a>
 
     <?php wp_body_open(); ?>
-
+		<?php if(!is_front_page()) { ?>
     <header class="header" role="banner">
         <div class="header__inner container">
 					<a href="/" class="logo">Granite<span>Roots</span></a>
@@ -50,5 +50,6 @@
 
         </div>
     </header>
+		<?php } ?>
 
     <div class="site" id="main-content">
