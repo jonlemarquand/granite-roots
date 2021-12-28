@@ -1,0 +1,10 @@
+.image {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1500px;
+	width: calc(100% - 50px);
+
+	.accordion & {// used inside accordion
+		width: 100%;
+	}
+}

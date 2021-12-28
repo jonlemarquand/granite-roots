@@ -1,0 +1,100 @@
+/*********************************************************
+## General editor styles
+*********************************************************/
+
+// increase standard block width
+.block-editor {
+	.wp-block:not(.alignfull):not([data-align="wide"]):not([data-align="full"]) {
+		max-width: 1000px;
+	}
+}
+
+// remove emphasis from the page title since this is not displayed on front end
+.editor-post-title__block {
+	opacity: 0.5;
+}
+
+.editor-styles-wrapper {
+	
+	// identify reusable blocks in the editor
+	.is-reusable {
+		border: 1px dotted #aaa;
+		
+		&:before {
+			content: 'REUSABLE';
+			bottom: 100%;
+			display: block;
+			padding: 4px 10px;
+			background: #eee;
+			color: #777;
+			font-weight: bold;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+// prevent underline animation link styles in settings sidebar
+.components-panel {
+	a {
+		color: unset;
+		background-image: unset;
+	}
+}
+
+// Stops select boxes being massive
+.components-select-control {
+	height: auto;
+}
+
+.component-image-picker{
+	&__edit-buttons{
+		display: flex;
+		margin-top: 10px;
+	}
+	
+	&__edit-button{
+		flex: 1;
+		text-align: center;
+		justify-content: center;
+		&:first-child{
+			margin-right: 10px;
+		}
+	}
+}
+
+.component-image-picker-preview{
+	position: relative;
+	display: inline-block;
+	
+	&:hover{
+		.component-image-picker-preview__edit-button{
+			background: #fff;
+			opacity: 1;
+			cursor: pointer;
+		}
+	}
+	
+	&__upload-button{//Image preview
+		margin-bottom: 10px;
+		background: #fff !important;
+	}
+	
+	&__edit-buttons{//Replace/Remove buttons
+		padding: 5px;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+	}
+	
+	&__edit-button{
+		background: transparent;
+		opacity: 0;
+		transition: 0.15s all ease;
+		cursor: none;
+		
+		&:first-child{
+			margin-right: 7.5px;
+		}
+	}
+}

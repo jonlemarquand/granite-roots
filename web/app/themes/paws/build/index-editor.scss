@@ -1,0 +1,11 @@
+// frontend styles are all included
+@import '../styles/index.scss';
+@import '../blocks-gutenberg/**/block.scss';
+@import '../blocks-acf/**/block.scss';
+
+// editor-only styles
+@import '../styles/editor-only.scss';
+@import '../blocks-gutenberg/**/editor.scss';
+@import '../blocks-acf/**/editor.scss';
+
+//DON'T ADD CODE HERE. THIS FILE IS NOT WATCHED FOR CHANGES.

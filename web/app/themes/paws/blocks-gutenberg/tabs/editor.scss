@@ -1,0 +1,80 @@
+.block-tabs{
+	max-width: 1330px !important; //set to container
+	margin-left: auto;
+	margin-right: auto;
+
+	&__nav{
+		margin-bottom: 0px !important;
+	}
+
+	&__nav-item{
+		margin-right: 20px !important;
+
+		&.add-tab{
+			font-weight: 600;
+			padding-bottom: 10px;
+			&:hover{
+				color: $color-blue;
+			}
+		}
+	}
+}
+
+.block-tab{
+	margin-top: 0px !important;
+
+	&__content{
+		border: 1px solid gainsboro;
+		border-top: none;
+		padding: 10px;
+		min-height: 100px;
+		padding-left: 30px;
+	}
+}
+
+.block-controls-delete {
+	display: flex;
+	align-items: center;
+
+	&__text{
+		padding-left: 10px;
+	}
+
+	&__button{
+		padding: 3px !important;
+		min-width: 48px;
+		border-radius: 0;
+		border: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+}
+
+
+.block-tabs {
+	> .block-editor-inner-blocks {
+		pointer-events: none;
+	}
+}
+
+.block-tab__content {
+	> * > .block-editor-block-list__layout {
+		pointer-events: auto;
+	}
+}
+
+
+.block-controls-tab-order{
+	display: flex;
+	align-items: center;
+
+	&__text{
+		padding-left: 10px;
+	}
+
+	&__button{
+		padding: 3px !important;
+	}
+}

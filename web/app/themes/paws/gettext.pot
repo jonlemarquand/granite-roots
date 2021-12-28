@@ -1,0 +1,24 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: build/gutenberg/static-block/index.js:22
+msgid "Example - Static Block"
+msgstr ""
+
+#: build/gutenberg/static-block/index.js:23
+msgid "Demonstration of how to make a static call to action block."
+msgstr ""
+
+#: build/gutenberg/static-block/index.js:30
+msgid "Banner"
+msgstr ""
+
+#: build/gutenberg/static-block/index.js:31
+msgid "CTA"
+msgstr ""
+
+#: build/gutenberg/static-block/index.js:32
+msgid "Shout Out"
+msgstr ""

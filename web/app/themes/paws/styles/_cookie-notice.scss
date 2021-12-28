@@ -1,0 +1,26 @@
+.cookie-bar {
+    display: none;
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+
+    &__text {
+        font-size: 12px;
+        margin-bottom: 0px;
+    }
+
+    &__link {
+        cursor: pointer;
+
+        &:hover {
+        }
+    }
+
+    &__button {
+        cursor: pointer;
+
+        &:hover {
+        }
+    }
+}

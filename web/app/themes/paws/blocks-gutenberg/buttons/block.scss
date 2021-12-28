@@ -1,0 +1,36 @@
+.block-buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block-button {
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 10px 16.29px;
+    display: inline-block;
+    color: $color-darkest;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    min-width: 115px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s ease-in-out all;
+    
+    &.primary {
+        background-color: $color-blue;
+        border: 2px solid $color-blue;
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+    &.secondary{
+        background-color: transparent;
+        border: 1px solid $color-green;
+        
+        &:hover{
+            background-color: transparent;
+        }
+    }
+}

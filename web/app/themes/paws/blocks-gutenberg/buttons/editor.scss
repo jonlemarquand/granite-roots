@@ -1,0 +1,50 @@
+.block-buttons{
+   display: block;
+   & > .block-editor-inner-blocks > .block-editor-block-list__layout:first-child{
+        display: flex;
+        flex-wrap: wrap;
+   }
+}
+.wp-block[data-type="paws/button"]{//TODO: Be able to use Variables in Editor file
+    margin: 0px;
+    .components-text-control__input{
+        border-radius: 4px;
+        font-size: 16px;
+        line-height: 24px;
+        text-decoration: none;
+        padding: 10px 16.29px;
+        display: inline-block;
+        color: #000;
+        margin-right: 8px;
+        font-family: 'Averta';
+    }
+}
+
+.block-editor-link-control {
+    min-width: 0;
+}
+
+//animate appender if block selected
+.wp-block[data-type="paws/buttons"] {
+    margin: 0 auto;
+
+    .block-list-appender {
+        align-self: baseline;
+    }
+
+	.block-editor-button-block-appender {
+        height: 48px;
+		transition: transform .2s, opacity .2s;
+		opacity: 0;
+        pointer-events: none;
+        transform: scale(0);
+	}
+
+	&.has-child-selected, &.is-selected {
+		.block-editor-button-block-appender {
+			opacity: 1;
+            pointer-events: all;
+            transform: scale(1);
+		}
+	}
+}

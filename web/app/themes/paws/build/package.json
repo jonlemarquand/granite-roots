@@ -1,0 +1,27 @@
+{
+  "name": "paws",
+  "version": "1.0.0",
+  "description": "Paws Theme",
+  "main": "blocksIndex.js",
+  "scripts": {
+    "build": "wp-scripts build ../blocks-gutenberg/index.js --output-path=./webpack-output --output-filename=gutenberg-editor.build.js",
+    "dev": "wp-scripts build ../blocks-gutenberg/index.js --output-path=./webpack-output --output-filename=gutenberg-editor.build.js --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "^19.0.0"
+  },
+  "dependencies": {
+    "@babel/register": "*",
+    "@babel/runtime": "*",
+    "@wordpress/icons": "^6.1.0",
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat-util": "*",
+    "gulp-sass": "^5.0.0",
+    "gulp-sass-glob": "*",
+    "gulp-sourcemaps": "^3.0.0"
+  }
+}

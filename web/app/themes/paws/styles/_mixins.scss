@@ -1,0 +1,41 @@
+// Breakpoints
+@mixin breakpoint($class) {
+  @if $class == sm {
+    @media (min-width: $breakpoint-sm) { @content; }
+  }
+  @else if $class == md {
+    @media (min-width: $breakpoint-md) { @content; }
+  }
+  @else if $class == lg {
+    @media (min-width: $breakpoint-lg) { @content; }
+  }
+  @else if $class == xl {
+    @media (min-width: $breakpoint-xl) { @content; }
+  }
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg, xl";
+  }
+}
+
+
+// Gutenberg color options
+$colors:
+	( lightest, $color-lightest ),
+	( blue, $color-blue ),
+	( green, $color-green ),
+	( orange , $color-orange ),
+	( red, $color-red ),
+	( lightest, $color-lightest ),
+	( darkest, $color-darkest );
+
+
+@each $name, $color in $colors {
+
+	.has-#{"" + $name}-color {
+		color: $color !important;
+	}
+
+	.has-#{"" + $name}-background-color {
+    background-color: $color;
+	}
+}
