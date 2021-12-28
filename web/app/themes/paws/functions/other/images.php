@@ -227,12 +227,8 @@ add_action( 'init', function() {
 			'render_callback' => function( $attributes, $content ) {
 				
 				$crop = true;
-				
-				if($attributes["parentBlockName"] == "paws/accordion-item"){
-					$container_width = 1330; // parent block max width
-				} else {
-					$container_width = 1600; // default content max width
-				}
+
+				$container_width = 1600; // default content max width
 
 				return replace_image_url_with_resized_url_and_add_srcset($content, $attributes, $container_width, $container_width, $crop);
 			},

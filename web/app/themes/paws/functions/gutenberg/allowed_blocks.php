@@ -20,6 +20,7 @@ add_filter( 'allowed_block_types_all', function( $allowed_blocks, $editor_contex
 			'core/heading',
 			'core/list',
 			'core/block',
+			'core/quote',
 
 			// Custom
 			"paws/image",

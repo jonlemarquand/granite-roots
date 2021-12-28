@@ -31,11 +31,11 @@
 		}
 
 		&.active{
-			color: $color-blue;
+			color: $color-green;
 			font-weight: 600;
 
 			&:after{//Underline bar
-				background: $color-blue;
+				background: $color-green;
 				bottom: 0px;
 				content: "";
 				display: block;

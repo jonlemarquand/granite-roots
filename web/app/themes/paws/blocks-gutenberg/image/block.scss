@@ -1,8 +1,11 @@
 .image {
-	margin-left: auto;
-	margin-right: auto;
+	margin: $space-6 auto;
 	max-width: 1500px;
-	width: calc(100% - 50px);
+	width: 100%;
+
+	img {
+		width: 100%;
+	}
 
 	.accordion & {// used inside accordion
 		width: 100%;

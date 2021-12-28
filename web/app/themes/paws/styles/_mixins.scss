@@ -21,12 +21,11 @@
 // Gutenberg color options
 $colors:
 	( lightest, $color-lightest ),
-	( blue, $color-blue ),
+	( light, $color-light ),
 	( green, $color-green ),
-	( orange , $color-orange ),
-	( red, $color-red ),
-	( lightest, $color-lightest ),
-	( darkest, $color-darkest );
+	( pink , $color-pink ),
+	( medium, $color-medium ),
+	( dark, $color-dark );
 
 
 @each $name, $color in $colors {

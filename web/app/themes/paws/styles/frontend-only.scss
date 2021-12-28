@@ -1,0 +1,110 @@
+body {
+	font-family: $secondary-font;
+	background: $color-lightest;
+	font-size: $body-font-size;
+}
+
+.container {
+	max-width: 1330px;
+	margin: 0 auto;
+	width: calc(100% - 180px);
+}
+
+.site {
+	position: relative;
+	top: 48px;
+}
+
+.header {
+	background: $color-dark;
+	height: 48px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+}
+
+.logo {
+	color: $color-lightest;
+	font-family: $primary-font;
+	font-weight: 900;
+	position: relative;
+	top: -3px;
+	text-decoration: none;
+
+	span {
+		font-family: $secondary-font;
+		font-weight: 400;
+	}
+}
+
+#wpadminbar + .header {
+	top: 32px;
+}
+
+footer {
+	margin-top: $space-8;
+	width: 100%;
+	background: $color-dark;
+	padding: $space-4 0;
+}
+
+a {
+	color: $color-pink;
+	font-weight: 700;
+}
+
+p {
+	margin-bottom: $space-3;
+}
+
+h1 {
+	font-family: $primary-font;
+	font-size: $h1-font-size;
+	line-height: $h1-font-size;
+	letter-spacing: $h1-letter-spacing;
+	margin-top: 0;
+	margin-bottom: $space-5;
+}
+
+blockquote {
+	margin: $space-3 0;
+	margin-left: $space-8;
+	padding-left: $space-2;
+	border-left: 4px solid $color-green;
+}
+
+cite {
+	font-family: $secondary-font;
+	font-weight: 400;
+	color: $color-green;
+}
+
+.left-column {
+	max-width: 881px;
+}
+
+.blog-featured-image {
+	max-height: 400px;
+	left: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	max-width: 100vw;
+	position: relative;
+	right: 50%;
+	width: 100vw;
+	object-fit: cover;
+}
+
+.subtitle {
+	margin-top: $space-8;
+	color: $color-green;
+	font-size: $subtitle-font-size;
+	margin-bottom: $space-1;
+}

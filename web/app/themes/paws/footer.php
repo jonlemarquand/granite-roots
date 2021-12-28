@@ -9,7 +9,7 @@
 
   <footer class="footer" role="contentinfo">
        <div class="container">
-           footer content
+        <a href="/" class="logo">Granite<span>Roots</span></a>
        </div>
   </footer>
 

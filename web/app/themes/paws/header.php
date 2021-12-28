@@ -23,6 +23,7 @@
 
     <header class="header" role="banner">
         <div class="header__inner container">
+					<a href="/" class="logo">Granite<span>Roots</span></a>
 
 			<?php if (has_nav_menu('header-menu')) { ?>
 
