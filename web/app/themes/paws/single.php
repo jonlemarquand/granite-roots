@@ -23,7 +23,7 @@
 						<div>
 							<p class="subtitle"><?php echo $post_date ?></p>
 							<h3><?php echo $related_post->post_title ?></h3>
-							<p><?php echo $related_post->post_excerpt ?></p>
+							<p>As I walk around the paths through the healthland I take delight in the colours around me.</p>
 						</div>
 					</a>
 					<?php

@@ -5,14 +5,22 @@ body {
 }
 
 .container {
-	max-width: 1330px;
+
+	width: calc(100% - 40px);
 	margin: 0 auto;
-	width: calc(100% - 180px);
+
+	@include breakpoint(md) {
+		max-width: 1330px;
+		width: calc(100% - 180px);
+	}
 }
 
 .site {
 	position: relative;
-	top: 48px;
+
+	@include breakpoint(md) {
+		top: 48px;
+	}
 }
 
 .header {
@@ -44,8 +52,19 @@ body {
 	}
 }
 
+#wpadminbar {
+
+	display: none;
+
+	@include breakpoint(md) {
+		display: block;
+	}
+}
+
 #wpadminbar + .header {
-	top: 32px;
+	@include breakpoint(md) {
+		top: 32px;
+	}
 }
 
 footer {
@@ -81,13 +100,18 @@ h2 {
 
 h3 {
 	font-size: $h3-font-size;
+	margin-bottom: $space-2;
 }
 
 blockquote {
 	margin: $space-3 0;
-	margin-left: $space-8;
 	padding-left: $space-2;
 	border-left: 4px solid $color-green;
+	margin-left: $space-2;
+
+	@include breakpoint(md) {
+		margin-left: $space-8;
+	}
 }
 
 cite {
@@ -113,10 +137,15 @@ cite {
 }
 
 .subtitle {
-	margin-top: $space-8;
+
 	color: $color-green;
 	font-size: $subtitle-font-size;
 	margin-bottom: $space-1;
+	margin-top: $space-5;
+
+	@include breakpoint(md) {
+		margin-top: $space-8;
+	}
 }
 
 .related-post {
@@ -127,9 +156,11 @@ cite {
 	color: $color-dark;
 	text-decoration: none;
 	font-weight: 400;
+	margin-bottom: $space-3;
 
 	@include breakpoint(md) {
 		flex-direction: row;
+		margin-bottom: 0;
 	}
 
 	&:hover {
@@ -149,8 +180,11 @@ cite {
 
 	&__image {
 		height: 136px;
-		width: 205px;
 		object-fit: cover;
-		margin-bottom: $space-5;
+
+		@include breakpoint(md) {
+			margin-bottom: $space-5;
+			width: 205px;
+		}
 	}
 }
